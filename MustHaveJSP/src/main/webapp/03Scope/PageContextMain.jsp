@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 
 <%
+// 값은 기본적으로 객체로 저장이 된다. ex. 1000은 integer형태의 객체로 저장이된다.
 pageContext.setAttribute("pageInteger", 1000);
 pageContext.setAttribute("pageString", "페이지 영역의 문자열");
 pageContext.setAttribute("pagePerson", new Person("한석봉", 99));
@@ -26,6 +27,7 @@ pageContext.setAttribute("pagePerson", new Person("한석봉", 99));
 		<li>Person 객체 : <%= pPerson.getName() %>, <%= pPerson.getAge() %></li>
 	</ul>
 	
+<!-- 	외부에 있는 jsp파일을 내부로 ctrl+c ctrl+v  -->
 	<h2>include된 파일에서 page 영역 읽어오기</h2>
 	<%@ include file ="PageInclude.jsp" %>
 	
