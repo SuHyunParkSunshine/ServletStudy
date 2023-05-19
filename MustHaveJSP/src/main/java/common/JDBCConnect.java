@@ -29,16 +29,52 @@ public class JDBCConnect {
 			e.printStackTrace();
 		}
 	}
+
+	public void showMem() {
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery("Select id, pass, name from member");
+																						
+			while (rs.next()) {
+				System.out.println(String.format("%s. %s, %s", 
+																	
+						rs.getString("id"), rs.getString("pass"), rs.getString("name")));
+			}
+		} catch (Exception e) {
+			
+		}
+
+	}
 	
+	public void showBor() {
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery("Select num, title, content, id from board");
+																						
+			while (rs.next()) {
+				System.out.println(String.format("%d, %s. %s, %s", 
+																	
+						rs.getInt("num"), rs.getString("title"), rs.getString("content"), rs.getString("id")));
+			}
+		} catch (Exception e) {
+			
+		}
+
+	}
+
 	public void close() {
 		try {
-			if (rs != null) rs.close();
-			if (stmt != null) stmt.close();
-			if (psmt != null) psmt.close();
-			if (con != null) con.close();
-			
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (psmt != null)
+				psmt.close();
+			if (con != null)
+				con.close();
+
 			System.out.println("JDBC 자원 해제");
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,8 +82,12 @@ public class JDBCConnect {
 	
 	public static void main(String[] args) {
 		JDBCConnect jdbcCon = new JDBCConnect();
+
+		jdbcCon.showMem();
 		
+		System.out.println("=".repeat(50));
 		
+		jdbcCon.showBor();
 		
 		jdbcCon.close();
 	}
