@@ -33,7 +33,7 @@ public class MemberDAOTest {
 	
 	public static void updateMemberDTO() {
 		MemberDTO memberDTO = new MemberDTO();
-		memberDTO.setId("Hong");
+		memberDTO.setId("Hone");
 		memberDTO.setPass("1234");
 		memberDTO.setName("캉캉이");
 		memberDAO.updateMemberDTO(memberDTO);		
@@ -50,8 +50,8 @@ public class MemberDAOTest {
 		System.out.println("-".repeat(80));
 
 		//insertMemberDTO();
-		//updateMemberDTO();
-		deleteMemberDTO();
+		updateMemberDTO();
+		//deleteMemberDTO();
 		printAllMemberDTO();
 		System.out.println("-".repeat(80));
 

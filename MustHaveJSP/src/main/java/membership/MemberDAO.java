@@ -148,13 +148,13 @@ public class MemberDAO extends JDBCConnectVerPF {
 		return ret;
 	}
 
-	public int updateMemberDTO(MemberDTO member) {
+	public void updateMemberDTO(MemberDTO member) {
 
 		String query = "update member set pass =?, name =? where id =?"; // 쿼리문 템플릿
 
 		Connection con = getConnection();
-		if (con == null)
-			return 0;
+//		if (con == null)
+//			return null;
 		PreparedStatement psmt = null;
 		int ret = 0;
 
@@ -179,8 +179,7 @@ public class MemberDAO extends JDBCConnectVerPF {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		}
-		return ret;	
+		}		
 	}
 
 	public int deleteMemberDTO(String uid) {
