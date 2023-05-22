@@ -23,17 +23,17 @@
 		<param-name>MySQLDriver</param-name>
 		<param-value>com.mysql.cj.jdbc.Driver</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>MySQLURL</param-name>
 		<param-value>jdbc:mysql://localhost:3306/musthave</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>MySQLId</param-name>
 		<param-value>musthave</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>MySQLPwd</param-name>
 		<param-value>1234</param-value>
@@ -44,19 +44,23 @@
 		<param-name>H2Driver</param-name>
 		<param-value>org.h2.Driver</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>H2URL</param-name>
 		<param-value>jdbc:h2:tcp://localhost/~/musthave</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>H2Id</param-name>
 		<param-value>musthave</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>H2Pwd</param-name>
 		<param-value>1234</param-value>
 	</context-param>
+
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
 </web-app>
