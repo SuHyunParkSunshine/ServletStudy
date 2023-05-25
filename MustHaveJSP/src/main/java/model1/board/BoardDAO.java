@@ -253,7 +253,6 @@ public class BoardDAO extends JDBCConnectVerPF {
 	public int updateEdit(Connection con, BoardDTO dto) {
 
 		PreparedStatement psmt = null;
-think tank
 
 		int result = 0;
 
