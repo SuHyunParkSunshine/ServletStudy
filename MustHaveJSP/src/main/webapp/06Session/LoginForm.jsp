@@ -36,7 +36,7 @@
 	} else {
 %>
 <%= session.getAttribute("UserName") %> 회원님 로그인하셨습니다.<br />
-<a href ="Logout.jsp">[]</a>
+<a href ="Logout.jsp">[로그아웃]</a>
 <%
 	}
 %>

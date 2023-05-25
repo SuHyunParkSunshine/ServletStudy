@@ -2,8 +2,8 @@ package common;
 
 public class Person {
 	
-	private String name;
-	private int age;
+	public String name;
+	public int age;
 	
 	public Person() {
 		

@@ -26,11 +26,11 @@ public class JDBCConnectVerPF {
 		this.pwd = pwd;
 	}
 
-	public JDBCConnectVerPF(ServletContext app) {
-		driver = app.getInitParameter("MySQLDrvier");
-		url = app.getInitParameter("MySQLURL");
-		id = app.getInitParameter("MySQLId");
-		pwd = app.getInitParameter("MySQLPwd");
+	public JDBCConnectVerPF(ServletContext application) {
+		driver = application.getInitParameter("MySQLDriver");
+		url = application.getInitParameter("MySQLURL");
+		id = application.getInitParameter("MySQLId");
+		pwd = application.getInitParameter("MySQLPwd");
 	}
 
 	public Connection getConnection() {
@@ -47,7 +47,7 @@ public class JDBCConnectVerPF {
 
 	public void closeConnection(Connection con) {
 		try {
-			con.close();
+			if(con != null) con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
