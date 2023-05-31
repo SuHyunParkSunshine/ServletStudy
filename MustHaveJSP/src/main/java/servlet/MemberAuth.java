@@ -15,7 +15,7 @@ import membership.MemberDAO;
 import membership.MemberDTO;
 
 @WebServlet(urlPatterns = "/13Servlet/MemberAuth.mvc",
-			initParams = {@WebInitParam(name="admin_id", value = "nakja")})
+			initParams = {@WebInitParam(name="admin_id", value = "suhyun")})
 
 public class MemberAuth extends HttpServlet{
 	MemberDAO dao;	
@@ -55,7 +55,9 @@ public class MemberAuth extends HttpServlet{
 			else
 				req.setAttribute("authMessage", "귀하는 회원이 아닙니다.");
 		}
-		req.getRequestDispatcher("/13Servlet/MemberAuth.jsp").forward(req, resp);
+//		req.getRequestDispatcher("/13Servlet/MemberAuth.jsp").forward(req, resp);
+		//web-inf 외부에서는 접근 할 수 없는 폴더이기 때문에 url 주소를 치면 404에러가 뜬다. 정보들을 내부적으로만 숨겨서 사용 
+		req.getRequestDispatcher("/WEB-INF/view/MemberAuthView.jsp").forward(req, resp);
 	}
 	
 	@Override

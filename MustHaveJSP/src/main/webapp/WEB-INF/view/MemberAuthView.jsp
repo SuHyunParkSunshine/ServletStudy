@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MemberAuth.jsp</title>
+<title>MemberAuthView.jsp</title>
 </head>
 <body>
 	<h2>MVC 패턴으로 회원인증하기</h2>
