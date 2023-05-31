@@ -1,11 +1,28 @@
 package membership;
 
-public class MemberDTO {
+import java.io.Serializable;
+
+//직렬화해가지고 파일에다가 쓰고 읽고 할 수 있는 객체라고 marking을 남기는 것, marking이 있어야지 readobject, writeobject가 가능
+public class MemberDTO implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 
 	private String id;
 	private String pass;
 	private String name;
 	private String regidate;
+	
+	public MemberDTO() {
+		// TODO Auto-generated constructor stub
+	}	
+
+	public MemberDTO(String id, String pass, String name, String regidate) {
+		super();
+		this.id = id;
+		this.pass = pass;
+		this.name = name;
+		this.regidate = regidate;
+	}
 
 	// 멤버 변수별 게터와 세터
 	public String getId() {
