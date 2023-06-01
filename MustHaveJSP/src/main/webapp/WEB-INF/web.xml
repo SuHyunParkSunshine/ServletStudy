@@ -14,6 +14,20 @@
 	</welcome-file-list>
 
 	<context-param>
+		<param-name>POSTS_PER_PAGE</param-name>
+		<param-value>10</param-value>
+	</context-param>
+	<context-param>
+		<param-name>PAGES_PER_BLOCK</param-name>
+		<param-value>5</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>maxPostSize</param-name>
+		<param-value>1024000</param-value>
+	</context-param>
+
+	<context-param>
 		<param-name>INIT_PARAM</param-name>
 		<param-value>web.xml에 저장한 초기화 매개변수</param-value>
 	</context-param>
